@@ -17,6 +17,7 @@ function getOutputPath() {
 module.exports = {
   entry: {
     'options.js': './src/main/options/main.js',
+    'popup.js': './src/main/popup/main.js',
     'background.js': './src/main/background/.tmp/background.js',
     'options-styles': './src/main/options/styles/options-styles.scss'
   },
@@ -71,6 +72,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: './assets/fox-48px.png', to: 'fox-48px.png' },
       { from: './assets/fox-96px.png', to: 'fox-96px.png' },
+      { from: './assets/fox-popup-64px.png', to: 'fox-popup-64px.png' },
       { from: './src/main/background/.tmp/service.wasm', to: 'service.wasm' },
       { from: './src/main/manifest.json', to: 'manifest.json' },
       { from: './src/main/options/index.html', to: 'options.html' },
