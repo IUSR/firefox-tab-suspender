@@ -1,0 +1,10 @@
+@import '../../shared/styles/reset.scss';
+@import '../../shared/styles/utils.scss';
+@import '../../shared/styles/layout.scss';
+@import '../../shared/styles/link.scss';
+
+/* Global default settings */
+body, input {
+ font-family: Arial,x-locale-body,sans-serif !important;
+}
+

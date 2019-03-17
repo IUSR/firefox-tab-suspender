@@ -19,7 +19,7 @@ module.exports = {
     'options.js': './src/main/options/main.js',
     'popup.js': './src/main/popup/main.js',
     'background.js': './src/main/background/.tmp/background.js',
-    'options-styles': './src/main/options/styles/options-styles.scss'
+    'styles': './src/main/shared/styles/styles.scss'
   },
   output: {
     filename: function(chunkData) {
@@ -62,7 +62,7 @@ module.exports = {
       filename: "[name].css",
     }),
     new PurgecssPlugin({
-      paths: glob.sync(`src/main/options/*.html`),
+      paths: glob.sync(`src/main/*/*.html`),
     }),
     new webpack.DefinePlugin({
       'process.env': {
@@ -72,10 +72,13 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: './assets/fox-48px.png', to: 'fox-48px.png' },
       { from: './assets/fox-96px.png', to: 'fox-96px.png' },
+      { from: './assets/fox-popup-32px.png', to: 'fox-popup-32px.png' },
       { from: './assets/fox-popup-64px.png', to: 'fox-popup-64px.png' },
+      { from: './assets/fox-popup-96px.png', to: 'fox-popup-96px.png' },
       { from: './src/main/background/.tmp/service.wasm', to: 'service.wasm' },
       { from: './src/main/manifest.json', to: 'manifest.json' },
       { from: './src/main/options/index.html', to: 'options.html' },
+      { from: './src/main/popup/index.html', to: 'popup.html' },
       { from: './LICENSE', to: './LICENSE.txt' },
     ], {}),
     new RemovePlugin({

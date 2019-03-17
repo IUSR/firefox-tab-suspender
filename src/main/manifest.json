@@ -29,7 +29,11 @@
   },
   "browser_action": {
     "default_icon": {
-      "48": "fox-popup-64px.png"
-    }
+      "32": "fox-popup-32px.png",
+      "64": "fox-popup-64px.png",
+      "96": "fox-popup-96px.png"
+    },
+    "default_title": "Tab Suspender",
+    "default_popup": "popup.html"
   }
 }
